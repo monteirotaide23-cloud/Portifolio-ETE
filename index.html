@@ -1,130 +1,271 @@
-<!doctype html>
-<html lang="pt">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfólio de design — projetos selecionados do ETE.">
-  <title>Portfólio de Design | ETE</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="wordmark" href="#inicio">PORTFÓLIO<span>.</span></a>
-    <nav aria-label="Navegação principal">
-      <a href="#trabalhos">Trabalhos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <p class="eyebrow">DESIGN · ESTRATÉGIA · IMPACTO</p>
-      <h1>Ideias claras.<br><em>Design com intenção.<br><em>Soluções que fazem a diferença.</em></h1>
-      <p class="intro">Transformo ideias em experiências visuais que comunicam, conectam pessoas e respondem a necessidades reais.</p>
-      <a class="text-link" href="#trabalhos">Explorar projetos <span aria-hidden="true">↘</span></a>
-      <div class="hero-note"><span>PORTFÓLIO DE DESIGN</span><span>EDIÇÃO 2026</span></div>
-    </section>
+/* ===== ESTILO GERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <section class="work-section" id="trabalhos">
-      <div class="section-heading">
-        <div><p class="eyebrow">SELEÇÃO</p><h2>Trabalhos em destaque ETE</h2></div>
-        <p>Onde a criatividade encontra a tecnologia para transformar ideias em soluções.</p>
-      </div>
+html {
+  scroll-behavior: smooth;
+}
 
-      <div class="project-grid">
-        <article class="project-card">    
-<a class="project-image image-one" href="images/Logotipo_ETE.jpg" aria-label="Ver Logotipo_ETE">
-  <img src="images/Logotipo_ETE.jpg" alt="Logotipo ETE" style="width:100%;height:100%;object-fit:contain;">
-  <span class="image-caption">IDENTIDADE VISUAL</span>
-</a>
-          <div class="project-meta"><div><h3>Logotipo — Identidade</h3><p>Logótipo · Sistema visual</p></div><span>2026</span></div>
-        </article>
-        <article class="project-card">  
-<a class="project-image image-two" href="images/Staff_ETE.jpg" aria-label="Ver Staff_ETE">
-  <img src="images/Staff_ETE.jpg" alt="Staff ETE" style="width:100%;height:100%;object-fit:contain;">
-  <span class="image-caption">STAFF_ETE</span>
-</a>
-          <div class="project-meta"><div>
-<h3>Staff ETE — A Nossa Equipa</h3>
-<p>Apresentação visual · Equipa ETE</p>
-</div><span>2026</span></div>
-        </article>
-        <article class="project-card">
-    
-<a class="project-image image-three" href="images/Poster%20ETE.jpg" aria-label="Ver Poster ETE">
-  <img src="images/Poster%20ETE.jpg" alt="Poster ETE" style="width:100%;height:100%;object-fit:contain;">
-  <span class="image-caption">POSTER ETE</span>
-</a>
-            <span class="placeholder-mark"></span><span class="image-caption">DESIGN DIGITAL</span>
-          </a>
-          <div class="project-meta"><div><h3>Poster_ETE.jpg — Digital</h3><p>Interface · Experiência</p></div><span>2026</span></div>
-        </article>
-       
-<article class="project-card">
-  <a class="project-image image-four" href="images/Workshop_ETE.jpg" aria-label="Ver Workshop ETE">
-    <img src="images/Workshop_ETE.jpg" alt="Workshop ETE" style="width:100%;height:100%;object-fit:contain;">
-    <span class="image-caption">WORKSHOP ETE</span>
-  </a>
-  <div class="project-meta">
-    <div>
-      <h3>Workshop ETE</h3>
-      <p>Workshop · Formação e criatividade</p>
-    </div>
-    <span>2026</span>
-  </div>
-</article>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080d16;
+  color: #f4f7fb;
+  line-height: 1.7;
+}
 
-        
-<article class="project-card">
-  <a class="project-image image-five" href="images/Certificado_ETE.jpg" aria-label="Ver Certificado_ETE.jpg">
-    <img src="images/Certificado_ETE.jpg" alt="Certificado_ETE.jpg" style="width:100%;height:100%;object-fit:contain;">
-    <span class="image-caption">CERTICADO ETE</span>
-  </a>
-  <div class="project-meta">
-    <div>
-      <h3>Certificado_ETE.jpg</h3>
-      <p>Actividades · Oferecidas</p>
-    </div>
-    <span>2026</span>
-  </div>
-</article>
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-        <article class="project-card">
-  <a class="project-image image-six" href="images/Poster_Candidatura_ETE.jpg" aria-label="Ver Poster_Candidatura_ETE.jpg">
-    <img src="images/Poster_Candidatura_ETE.jpg" alt="Poster_Candidatura_ETE.jpg" style="width:100%;height:100%;object-fit:contain;">
-    <span class="image-caption"></span>
-  </a>
-  <div class="project-meta">
-    <div>
-      <h3>Poster_Candidatura_ETE.jpg</h3>
-      <p>Actividade desenvolvida</p>
-    </div>
-    <span>2026</span>
-  </div>
-</article>
+img {
+  display: block;
+  max-width: 100%;
+}
 
+section {
+  padding: 90px 8%;
+}
 
-      </div>
-    </section>
+/* ===== CABEÇALHO ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 8%;
+  background: rgba(5, 10, 20, 0.94);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+}
 
-    <section class="about-section" id="sobre">
-      <p class="eyebrow">UM POUCO SOBRE MIM</p>
-      <div>
-        <h2>Design que une<br><em>forma e propósito.</em></h2>
-        <p>Sou profissional e criativa na área do design, com interesse em comunicação visual, identidade gráfica e criação de conteúdos. Neste portefólio, apresento alguns dos trabalhos desenvolvidos no projeto ETE, incluindo o logótipo, a apresentação da equipa, o poster e as atividades de workshop. Cada projeto representa uma oportunidade de aprender, explorar ideias e desenvolver as minhas competências criativas.</p>
-        <p class="small-note">Personaliza este texto com a tua experiência, ferramentas e áreas de especialização.</p>
-      </div>
-    </section>
+header h1 {
+  font-size: 1.3rem;
+  color: #eaf4ff;
+}
 
-    <section class="contact-section" id="contacto">
-      <p class="eyebrow">VAMOS CONVERSAR</p>
-      <h2>Tens um projeto<br>em mente?</h2>
-      <p>Entra em contacto para conversar sobre colaboração ou oportunidades.</p>
-      <a class="contact-link" href=<"monteirotaide23@gmail.com">monteirotaide23@gmail.com ↗</a>
-    </section>
-  </main>
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
 
-  <footer><span>© 2026 · Portfólio de Design</span><span>Feito com intenção.</span></footer>
-</body>
-</html>
+nav a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #7dd3fc;
+}
+
+/* ===== FUNDO DA PÁGINA INICIAL ===== */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(4, 9, 18, 0.92), rgba(4, 9, 18, 0.45)),
+    url("images/computer.jpg") center / cover no-repeat;
+}
+
+.hero h2 {
+  max-width: 850px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.12;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #dbe7f5;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+}
+
+/* ===== BOTÕES ===== */
+.btn,
+button {
+  display: inline-block;
+  padding: 13px 24px;
+  border: 1px solid #7dd3fc;
+  border-radius: 8px;
+  background: #0c2638;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover,
+button:hover {
+  background: #164e63;
+  transform: translateY(-2px);
+}
+
+/* ===== TÍTULOS ===== */
+section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+section h3 {
+  margin-bottom: 12px;
+}
+
+/* ===== SOBRE MIM: FUNDO DA CIDADE ===== */
+#sobre,
+.about-section {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(rgba(5, 12, 23, 0.84), rgba(5, 12, 23, 0.91)),
+    url("images/vista.webp") center / cover no-repeat;
+}
+
+#sobre p,
+.about-section p {
+  max-width: 850px;
+  color: #d6e0ed;
+  margin-bottom: 16px;
+}
+
+/* ===== PROJETOS ===== */
+#projetos,
+.projects-section {
+  background: #0b1220;
+}
+
+.project-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.project-card,
+.project {
+  overflow: hidden;
+  background: rgba(17, 28, 45, 0.94);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 14px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card:hover,
+.project:hover {
+  transform: translateY(-6px);
+  border-color: #7dd3fc;
+}
+
+.project-card img,
+.project img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.project-card h3,
+.project h3 {
+  padding: 18px 18px 5px;
+  color: #f8fafc;
+}
+
+.project-card p,
+.project p {
+  padding: 0 18px 20px;
+  color: #cbd5e1;
+}
+
+/* ===== COMPETÊNCIAS ===== */
+#competencias,
+#skills,
+.skills-section {
+  background: #080d16;
+}
+
+#competencias ul,
+#skills ul,
+.skills-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin-top: 25px;
+}
+
+#competencias li,
+#skills li,
+.skills-section li {
+  padding: 10px 16px;
+  background: #111c2d;
+  color: #dbeafe;
+  border: 1px solid #26364d;
+  border-radius: 8px;
+}
+
+/* ===== CONTACTOS ===== */
+#contactos,
+#contacto,
+#contato,
+.contact-section {
+  background: #0b1220;
+}
+
+#contactos p,
+#contacto p,
+#contato p,
+.contact-section p {
+  margin-bottom: 12px;
+  color: #d6e0ed;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  padding: 25px 8%;
+  text-align: center;
+  background: #050912;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== TELEMÓVEIS ===== */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  section {
+    padding: 65px 6%;
+  }
+
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-card img,
+  .project img {
+    height: 200px;
+  }
+}
+
