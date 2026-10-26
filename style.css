@@ -458,3 +458,75 @@ footer {
     padding: 22px 6%;
   }
 }
+
+/* TÍTULOS COM TOQUE CURSIVO */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Great+Vibes&display=swap');
+
+.hero h1 em,
+.about-section h2 em,
+.section-heading h2,
+.contact-section h2 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* FUNDO DOS PROJECTOS */
+.work-section {
+  position: relative;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(8, 17, 31, 0.97),
+      rgba(14, 35, 52, 0.94),
+      rgba(7, 13, 24, 0.98)
+    );
+  border-top: 1px solid rgba(139, 213, 245, 0.2);
+  border-bottom: 1px solid rgba(139, 213, 245, 0.2);
+}
+
+/* CARTÕES DOS PROJECTOS */
+.project-card {
+  background: rgba(16, 26, 41, 0.92);
+  border: 1px solid rgba(139, 213, 245, 0.18);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* FUNDO DE VAMOS CONVERSAR */
+.contact-section {
+  position: relative;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(72, 155, 194, 0.28),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #0d1b2b,
+      #132b3d,
+      #080e19
+    );
+  border-top: 1px solid rgba(139, 213, 245, 0.25);
+}
+
+/* DESTAQUE NOS TÍTULOS */
+.section-heading h2,
+.contact-section h2 {
+  color: #f5f7fb;
+}
+
+.hero h1 em,
+.about-section h2 em {
+  color: #8bd5f5;
+}
+
+/* TELEMÓVEIS */
+@media (max-width: 750px) {
+  .section-heading h2,
+  .contact-section h2,
+  .hero h1 em,
+  .about-section h2 em {
+    line-height: 1.35;
+  }
+}
